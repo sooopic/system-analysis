@@ -4,30 +4,42 @@ description: What does your user need to know to try your project?
 weight: 2
 ---
 
+## Task 2.1
+
 {{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
+### Reverse engineering
+
+Scenario:
+
+You need to create accompanying documentation for an already implemented endpoint.
+Imagine that developers don't have access to this endpoint and have to trust your
+documentation blindly
+
+Endpoint: https://www.okx.com/priapi/v5/market/mult-cup-tickers?t=1687526827042&ccys=ETH
+
 {{% /pageinfo %}}
 
-Information in this section helps your user try your project themselves.
+## Task 2.2
 
-* What do your users need to do to start using your project? This could include downloading/installation instructions, including any prerequisites or system requirements.
+{{% pageinfo %}}
+How is POST different from GET?
+{{% /pageinfo %}}
 
-* Introductory “Hello World” example, if appropriate. More complex tutorials should live in the Tutorials section.
+**GET** method is often used for retrieving information from server. Mostly, this mehod doesn't contains the body part in request (some of web-servers will not except )
 
-Consider using the headings below for your getting started page. You can delete any that are not applicable to your project.
+**POST** contains the body part in the request and mostly using for sending information to the server. It also could be used for retrieving infromation, when there are not enough _Query Parameters_ in GET-method
 
-## Prerequisites
+## Task 2.3
 
-Are there any system requirements for using your project? What languages are supported (if any)? Do users need to already have any software or tools installed?
+{{% pageinfo %}}
+There are two systems. Name all the ways to integrate these systems.
+{{% /pageinfo %}}
 
-## Installation
+There are ways:
+* Request-responce
+* Queues
+* RPC
+* Async
+* External storage
 
-Where can your user find your project code? How can they install it (binaries, installable package, build from source)? Are there multiple options/versions they can install and how should they choose the right one for them?
-
-## Setup
-
-Is there any initial setup users need to do after installation to try your project?
-
-## Try it out!
-
-Can your users test their installation, for example by running a command or deploying a Hello World example?
+### Request-responce
