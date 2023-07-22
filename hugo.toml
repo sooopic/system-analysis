@@ -1,5 +1,6 @@
 baseURL = "/"
 title = "Goldydocs"
+theme = "docsy"
 
 # Language settings
 contentDir = "content/en"
