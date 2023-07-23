@@ -49,7 +49,7 @@ Also there are some microservices:
 > I described only the main services, but there could be more of them for: news, chat, statistic, etc.
 
 The simple scheme for such an application:
-![Scheme](/trading.png)
+![Scheme](/system-analysis/trading.png)
 
 > Use information from this source: https://htc-cs.ru/portfolio/ecommerce/mobilnoe-prilozhenie-tinkoff-investitsii 
 
