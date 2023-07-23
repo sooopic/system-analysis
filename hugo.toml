@@ -65,8 +65,8 @@ languageName ="English"
 # Weight used for sorting.
 weight = 1
 [languages.en.params]
-title = "Goldydocs"
-description = "A Docsy example site"
+title = "System Analysis"
+description = "A site for answers"
 
 [markup]
   [markup.goldmark]

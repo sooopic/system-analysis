@@ -17,7 +17,7 @@ What advantages and disadvantages of microservices do you know?
 * It's **easier to support** small, independent services than one huge application
 * Microservises architecture **is more fail-safe**, because even if one service is down the others are still function
 * Microservises allow to **implement CI/CD process with different flows for each services**, because each service could be started and shге down separately
-* Different teams could use **different technologies and their own prodaction cycle** for each service
+* Different teams could use **different technologies and their own production cycle** for each service
 
 ### Disadvantages
 
@@ -27,7 +27,7 @@ What advantages and disadvantages of microservices do you know?
     The team must prepare all the enviroment for different microservices (including message brokers, DB for each service, etc.)
 * It's **hard to coordinate a huge amount of services**, espesially if there are distributed transactions \
     The team must be prepared for using special monitoring software for all microservices
-* There is **extra latency during inter-service communication** because microservices uses high level API.
+* There is **extra latency during inter-service communication** because microservices use high level API for inter-service communication.
 
 ## Task 3.2
 

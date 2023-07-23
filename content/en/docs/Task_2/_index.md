@@ -121,7 +121,7 @@ curl --location --request GET 'http://{host}/auth/realms/{realm}/protocol/openid
 --header 'Authorization: Bearer .eyJleHAiOjE2NjUzMzczNTUsIml********'
 ```
 
-**POST** contains the body part in the request and is used mostly for sending information to the server (such as creating new resource). It also could be used for retrieving infromation, when there are not enough _Query Parameters_ in GET-method (but it is exceptions).
+**POST** contains the body part in the request and is used mostly for sending information to the server (such as creating new resource). It also could be used for retrieving infromation, when there are not enough _Query Parameters_ in GET-method (but it is exception).
 
 Example of simple POST request:
 ```bash
