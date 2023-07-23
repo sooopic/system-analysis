@@ -12,5 +12,7 @@ title: "System Analytics Task"
 {{% blocks/lead color="primary" %}}
 I want to create something special for your task, so this site is an example of my skills.
 
-I have no experience with trading systems, but I have faced with different types of information systems during my career.
+I have no experience with trading systems, but I have faced with different types of information systems during my career. And I want to learn something new!
+
+While perfoming this answers, I learn a lot of new trading terms and want to start investing by myself.
 {{% /blocks/lead %}}

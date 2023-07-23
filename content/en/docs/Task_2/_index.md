@@ -1,6 +1,6 @@
 ---
 title: "Task 2. Integrations"
-description: What does your user need to know to try your project?
+description: "Questions about system integrations"
 weight: 2
 ---
 
@@ -21,19 +21,19 @@ Endpoint: https://www.okx.com/priapi/v5/market/mult-cup-tickers?t=1687526827042&
 
 ### Method description
 
-* Protocol: HTTPS
-* Method: GET
-* Host: https://www.okx.com/
-* URL Endpoint: /priapi/v5/market/mult-cup-tickers
+* Protocol: **HTTPS**
+* Method: **GET**
+* Host: **https://www.okx.com/**
+* URL Endpoint: **/priapi/v5/market/mult-cup-tickers**
 
 Method recieves the currency name and time value and returns the exchange rate (for USD) for choosen timestamp.
 
 ### Input 
 
-| Attribute | Belongs | Require | Type   | Mask              | Comments                                                         |
-| :-------- | :-----: | :-----: | :----: | :---------------: | :--------------------------------------------------------------- |
-| t         | Query   | ❌      | string | Unix Timestamp    | Timestamp. Default value - current timestamp.                    |
-| ccys      | Query   | ✅      | string | enum[ETH,BTC,...] | Currency name. Can be several values per requests. Can't be null |
+| Attribute | Belongs | Require | Type   | Mask              | Comments                                                        |
+| :-------- | :-----: | :-----: | :----: | :---------------: | :-------------------------------------------------------------- |
+| t         | Query   | ❌      | string | Unix Timestamp    | Timestamp. Default value - current timestamp.                   |
+| ccys      | Query   | ✅      | string | enum[ETH,BTC,...] | Currency name. Can be several values per request. Can't be null |
 
 ### Output 
 
@@ -51,24 +51,23 @@ Method recieves the currency name and time value and returns the exchange rate (
 | data[n].low24h  | Body    | ❌      | string    | float             | Minimum exchange rate (USD)                                            |
 | data[n].sodUtc8 | Body    | ❌      | string    | float             | Start of day (UTC8) exchange rate (USD)                                |
 
-> Data will be empty if request contains wrong parameters!
+> **data** array will be empty if request contains wrong parameters!
 
 #### Input example
 
-Correct request:
+**Correct** request:
 ```bash 
 curl --location --request GET 'https://www.okx.com/priapi/v5/market/mult-cup-tickers?t=1687526827042&ccys=ETH,BTC'
 ```
 
-Error request:
+**Error** request:
 ```bash 
 curl --location --request GET 'https://www.okx.com/priapi/v5/market/mult-cup-tickers?ccys='
 ```
 
 #### Output example
 
-Correct answer:
-
+**Correct** answer:
 ```json
 {
     "code":"0",
@@ -98,8 +97,7 @@ Correct answer:
 }
 ```
 
-Error: 
-
+**Error**: 
 ```json
 {
     "code":"51000",
@@ -111,7 +109,7 @@ Error:
 ## Task 2.2
 
 {{% pageinfo %}}
-How is POST different from GET?
+How is **POST** different from **GET**?
 {{% /pageinfo %}}
 
 **GET** method is often used for retrieving information from server. This method doesn't contains the Body-part in request.
@@ -123,7 +121,7 @@ curl --location --request GET 'http://{host}/auth/realms/{realm}/protocol/openid
 --header 'Authorization: Bearer .eyJleHAiOjE2NjUzMzczNTUsIml********'
 ```
 
-**POST** contains the body part in the request and mostly using for sending information to the server (such as creating new resource). It also could be used for retrieving infromation, when there are not enough _Query Parameters_ in GET-method (but it is exceptions).
+**POST** contains the body part in the request and is used mostly for sending information to the server (such as creating new resource). It also could be used for retrieving infromation, when there are not enough _Query Parameters_ in GET-method (but it is exceptions).
 
 Example of simple POST request:
 ```bash
@@ -148,14 +146,14 @@ curl --location --request POST 'https://{hostname}/{index}/_doc/{id}' \
 There are two systems. Name all the ways to integrate these systems.
 {{% /pageinfo %}}
 
-The main types are:
+The main types of two systems integration are:
 
 * **Request-responce (or point-to-point)**
 * **Async interaction**
 * **External storage**
 * **System level integration**
 
-These are not the only ways to integrate two systems, but these ones are widespread.
+These ways are not the only ones, but these are widespread the most.
 
 ### Request-responce (or point-to-point)
 
@@ -164,20 +162,21 @@ These are not the only ways to integrate two systems, but these ones are widespr
 ```mermaid
 sequenceDiagram
     System_1 ->>+ System_2: request via REST / SOAP / gRPC
-    System_2 -->>- System_1: response
+    System_2 ->> System_2: make actions
+    System_2 -->>- System_1: send response
 ```
 
-There could be different protocols (most popular): 
+There could be different protocols (most popular):
 
-* SOAP (XML over HTTP)
 * REST API (JSON over HTTP)
+* SOAP (XML over HTTP)
 * GraphQL
 * gRPC (one-directional)
-* etc
+* etc.
 
 ### Async interaction
 
-There are different ways to integrate two systems in async way:
+There are different ways to integrate two systems in an async way:
 
 * Using message brokers (Kafka, RabbitMQ)
     * Publisher/Subscriber
@@ -249,7 +248,7 @@ sequenceDiagram
 
 #### gRPC (bidirectional) 
 
-This protocol is mostly used for integration of frontend and backend.
+> Usually this protocol is used for integration of frontend and backend.
 
 ```mermaid
 sequenceDiagram
