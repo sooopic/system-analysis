@@ -79,3 +79,6 @@ description = "A Docsy example site"
     style = "tango"
     # Uncomment if you want your chosen highlight style used for code blocks without a specified language
     # guessSyntax = "true"
+
+[params.plantuml]
+enable = true
